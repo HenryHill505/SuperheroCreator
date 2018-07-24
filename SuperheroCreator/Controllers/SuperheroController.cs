@@ -36,9 +36,21 @@ namespace SuperheroCreator.Controllers
             }
         }
 
-        public ActionResult Edit()
+        public ActionResult Edit(int Id)
         {
-            return View();
+            var hero = db.Superhero.Where(h => h.Id == Id).FirstOrDefault();
+            return View(hero);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Superhero hero)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(hero).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+            return List();
         }
 
         public ActionResult List()
