@@ -36,6 +36,11 @@ namespace SuperheroCreator.Controllers
             }
         }
 
+        public ActionResult Edit()
+        {
+            return View();
+        }
+
         public ActionResult List()
         {
             return View(db.Superhero.ToList());
