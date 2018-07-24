@@ -21,6 +21,21 @@ namespace SuperheroCreator.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Create(Superhero newHero)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Superhero.Add(newHero);
+                db.SaveChanges();
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+        }
+
         public ActionResult List()
         {
             return View(db.Superhero.ToList());
