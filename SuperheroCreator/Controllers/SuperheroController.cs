@@ -28,11 +28,11 @@ namespace SuperheroCreator.Controllers
             {
                 db.Superhero.Add(newHero);
                 db.SaveChanges();
-                return View();
+                return View("List", db.Superhero.ToList());
             }
             else
             {
-                return View();
+                return View("List", db.Superhero.ToList());
             }
         }
 
