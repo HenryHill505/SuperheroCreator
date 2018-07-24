@@ -13,5 +13,10 @@ namespace SuperheroCreator.Controllers
         {
             return View();
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
