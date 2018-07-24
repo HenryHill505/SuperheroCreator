@@ -44,6 +44,11 @@ namespace SuperheroCreator.Controllers
             return View("List", db.Superhero.ToList());
         }
 
+        public ActionResult Details()
+        {
+            return View();
+        }
+
         public ActionResult Edit(int Id)
         {
             var hero = db.Superhero.Where(h => h.Id == Id).FirstOrDefault();
