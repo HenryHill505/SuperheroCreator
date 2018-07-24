@@ -1,23 +1,21 @@
 ﻿@model IEnumerable<SuperheroCreator.Models.Superhero>
 
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = "Heroes";
 }
 
 <img src="https://78.media.tumblr.com/tumblr_l9kh52E7MO1qzb9rso1_500.png" />
 
-<h2>List</h2>
+<h2>Super Heroes</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add New Hero", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.HeroName)
         </th>
-
-        <th></th>
     </tr>
 
 @foreach (var item in Model)
