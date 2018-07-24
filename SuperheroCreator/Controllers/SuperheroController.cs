@@ -50,7 +50,7 @@ namespace SuperheroCreator.Controllers
                 db.Entry(hero).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
             }
-            return List();
+            return View("List", db.Superhero.ToList());
         }
 
         public ActionResult List()
