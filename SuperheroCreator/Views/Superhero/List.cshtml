@@ -6,25 +6,20 @@
 
 <img src="https://78.media.tumblr.com/tumblr_l9kh52E7MO1qzb9rso1_500.png" />
 
-<h2>Super Heroes</h2>
+<div align="center">
 
-<p>
-    @Html.ActionLink("Add New Hero", "Create")
-</p>
-<table class="hero-table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.HeroName)
-        </th>
-    </tr>
+    <table class="hero-table">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.HeroName, "Details", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
 
-@foreach (var item in Model)
-{
-    <tr>
-        <td>
-            @Html.ActionLink(item.HeroName, "Details", new { id = item.Id })
-        </td>
-    </tr>
-}
-
-</table>
+    <p>
+        @Html.ActionLink("Add New Hero", "Create")
+    </p>
+</div>
