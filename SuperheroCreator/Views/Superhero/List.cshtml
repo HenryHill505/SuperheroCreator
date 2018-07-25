@@ -6,7 +6,7 @@
 
 <img class="img-rounded" src="https://78.media.tumblr.com/tumblr_l9kh52E7MO1qzb9rso1_500.png" />
 
-<div align="center">
+<div class="hero-table-container">
 
     <table class="hero-table">
         @foreach (var item in Model)
@@ -19,7 +19,7 @@
         }
     </table>
 
-    <p>
+    <p class="add-hero-link">
         @Html.ActionLink("Add New Hero", "Create")
     </p>
 </div>

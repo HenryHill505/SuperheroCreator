@@ -27,6 +27,16 @@ td a {
     font-size: 1.5em;
 }
 
+.hero-table-container {
+    border-top: 1px solid white;
+    margin-top: 10px;
+}
+
+.hero-table {
+    
+    margin: auto;
+}
+
 .jumbotron {
     background-color: #DF691A;
 }
@@ -43,4 +53,10 @@ body {
 
 .form-group label, .form-group input {
     font-size: 15px;
+}
+
+.add-hero-link {
+    text-align: center;
+    border-top: 1px solid white;
+    margin-top: 10px;
 }
