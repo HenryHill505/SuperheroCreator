@@ -10,7 +10,7 @@ namespace SuperheroCreator.Models
     {
         [Key]
         public int Id { get; set; }
-
+        [Display(Name ="Hero Name")]
         public string HeroName { get; set; }
         public string AlterEgo { get; set; }
         public string PrimaryAbility { get; set; }
