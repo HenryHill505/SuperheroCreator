@@ -24,7 +24,7 @@ textarea {
 }
 
 td a {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .jumbotron {
@@ -37,3 +37,10 @@ img {
     margin-right: auto;
 }
 
+body {
+    font-size: 15px;
+}
+
+.form-group label, .form-group input {
+    font-size: 15px;
+}
